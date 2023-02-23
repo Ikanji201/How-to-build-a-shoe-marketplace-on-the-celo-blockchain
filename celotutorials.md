@@ -50,9 +50,9 @@ To get started with remix click on this link (https://remix.ethereum.org/)
 
 pragma solidity >=0.7.0 <0.9.0;
 ```
-  The SPDX license identifiers assist us so we can specify what license the contract is using. SPDX license identifiers should be added to the top of contract files.
+The SPDX license identifiers assist us so we can specify what license the contract is using. SPDX license identifiers should be added to the top of contract files.
 
-The Pragma is used to specify what version of solidity our smart contracts uses and thereby help the compiler to decide on the required.
+The Pragma is used to specify what version of Solidity our smart contracts use and thereby help the compiler to decide on the required.
 
 **How do you know the version of solidity to use?** 
 
@@ -66,7 +66,7 @@ Next we would be discussing about the IERC20 token which enables us carry out tr
   Put simply, the ERC20 standard defines a set of functions to be implemented by all ERC20 tokens such as cUSD, so as to allow integration with other contracts, wallets, or marketplaces. 
 WE can find the functions and events of the interface in the Celo documentation (https://docs.celo.org/)
 
-```js
+```solidity
 // SPDX-License-Identifier: MIT
 
 pragma solidity >=0.7.0 <0.9.0;
@@ -91,8 +91,8 @@ contract ShoeAuction {
     uint256 internal shoesLength = 0;
 
 ```
-In the next line, we define a state variable named shoesLength, this is going to help store shoes permanently in our contract and also help keep track oof the number of shoes in our contract, It is of a `uint` data type which means it can only store unsigned integer values. <br>
-```js
+In the next line, we define a state variable named shoesLength, this is going to help store shoes permanently in our contract and also help keep track of the number of shoes in our contract, It is of a `uint` data type which means it can only store [unsigned integer values](https://docs.soliditylang.org/en/latest/types.html#integers). <br>
+```solidity
  
  address internal cUsdTokenAddress =
         0x874069Fa1Eb16D44d622F2e0Ca25eeA172369bC1;
@@ -109,7 +109,7 @@ Struct types are used to represent a record. Suppose you want to keep track of y
 - Title
 - Author
 - Subject
-- Book ID <br>
+- Book ID 
   
  To define a Struct, you must use the struct keyword. The struct keyword defines a new data type, with more than one member. The format of the struct statement is as follows −
 
@@ -132,6 +132,7 @@ From the code above,The code defines a struct named Shoe, which holds informatio
 In the next step we create a two mapping, a mapping named shoes is declared, which maps an unsigned integer to a Shoe struct, and is declared as private so that it can only be accessed within the contract.
 
 A mapping named _exists is also declared, which maps an unsigned integer to a boolean value to indicate if a shoe with the specified id exists or not. 
+
    ```js
      modifier exists(uint256 _index) {
         require(_exists[_index], "Query of a nonexistent shoe");
@@ -510,7 +511,6 @@ OpenZeppelin Contracts, a library of secure, tested smart contract code: https:/
 Solidity documentation for version 0.8.17: https://docs.soliditylang.org/en/v0.8.17/
 
 I hope these resources prove to be useful to you!
-
 
 
 
