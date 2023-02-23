@@ -1,4 +1,5 @@
- # How to Build an Auction Smart Contract for Selling Shoes on Celo Blockchain..
+ # How to Build an Auction Smart Contract for Selling Shoes on Celo Blockchain.
+ 
 ## INTRODUCTION
 
 ## What is BlockChain all about?
